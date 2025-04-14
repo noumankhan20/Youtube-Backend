@@ -1,0 +1,15 @@
+{
+  "name": "youtube-backend",
+  "version": "1.0.0",
+  "description": "learning backend from scratch",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "author": "Nouman Khan",
+  "license": "ISC"
+}
