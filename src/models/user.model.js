@@ -37,22 +37,25 @@ const userSchema=new mongoose.Schema({
     watchHistory:[{
         type:Schema.Types.ObjectId,
         ref:"Video"
-    }],
+    }
+],
     password:{
         type:String,
         required:[true,'Password is required'],
     },
     refreshtoken:{
         type:String,
-    },
-    timestamps:true
+    }
+},
+    {
+    timestamps:true  //timestamps humesha second argument rehta h matlab ye updar ke model alag create honge fir timestamps alag se create hoga 
     }
 )
 
 userSchema.pre("save",async function(next) {
     if(!this.isModified("password")) return next ();
 
-    this.password=bcrypt.hash(this.password,11)//chai aur code ne 10 has lagaye h maine 11
+    this.password= await bcrypt.hash(this.password,11)//chai aur code ne 10 has lagaye h maine 11
     next()
 } )
 

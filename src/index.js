@@ -1,6 +1,6 @@
 // require ('dotenv').config({path: './env'})
 import dotenv from "dotenv";
-import connectDB from "./db/index.js";
+import connectDB from "./db/index.js";//aise import tab karte h jab export defualt connecDB ke naam se apni file se ye chiz export hui h
 import {app} from "./app.js"//ye define nhi kiya tha to error fek rha tha isi file ki 22 line wala refernece app is not deifned karke 
 
 dotenv.config({
