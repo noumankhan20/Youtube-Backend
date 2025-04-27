@@ -63,12 +63,13 @@ userSchema.methods.isPasswordCorrect=async function(password){
     return await bcrypt.compare(password,this.password)
 }
 
-userSchema.methods.generateAccessToken=async function(){
+userSchema.methods.generateAccessToken= function(){//yaha  pehle async lagaya tha fucntion ke phele to error de diya access token should be a string
+    //kyuki async lagane se cheezein promise ban jaati h aur json ko promise nhi samjhta aur upar se mein controller mein maine string call kiya tha !!! (accha error tha maja aaagya)
    return jwt.sign({
     _id:this._id,
-    email:this._email,
-    username:this._username,
-    fullname:this._fullname,
+    email:this.email,
+    username:this.username,
+    fullname:this.fullname,
     },
     process.env.ACCESS_TOKEN_SECRET,
     {
