@@ -3,7 +3,7 @@ import {ApiError} from "../utils/ApiError.js"// ye {ApiError} humse tab likhte h
 import { User } from "../models/user.model.js";//ye bhi iske pass bhi default nhi likha hua tha isiliye aise import kiye!!!
 import { uploadonCloudinary } from "../utils/cloudinary.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
-import jwt from "jsowebtoken";
+import jwt from "jsonwebtoken";
 import { decode } from "jsonwebtoken";
 //ONE THING ALSO TO NOTE KI JAB BHI FIND ONE YA KUCH BHI QUERY LIKHTE HUE JO User HUMNE CAPITAL MEIN LIKHA H WO USER HOGA RATHER THAN IT user USE HOGA !!!!!
 
